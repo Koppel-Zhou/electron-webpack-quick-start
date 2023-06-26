@@ -9,11 +9,17 @@
     "dist:dir": "yarn dist --dir -c.compression=store -c.mac.identity=null"
   },
   "dependencies": {
+    "node-systeminformation": "git+ssh:git@github.com:Koppel-Zhou/node-systeminformation",
     "source-map-support": "^0.5.16"
   },
+  "build": {
+    "mac": {
+      "target":  ["mas", "dmg"]
+    }
+  },
   "devDependencies": {
-    "electron": "8.2.0",
-    "electron-builder": "^22.4.1",
+    "electron": "^20.1.0",
+    "electron-builder": "23.3.3",
     "electron-webpack": "^2.8.2",
     "webpack": "~4.42.1"
   }
